@@ -1,0 +1,122 @@
+Description - Automate creating and sending a daily email digest. Something like pocket but only from the sources I like 
+Benefit - No ads and collect the data for analysis later
+Note: 
+Keep the initial scope reasonable
+You can add more features later 
+
+Step 1 - User Stories 
+-> We can start a project by writing user stories 
+-> A user story describes a single scenario from user's perspective
+-> IT should focus on the user's goal rather than focusing on the application itself. i.e what the user wants 
+-> It should be short, simple and casual
+-> A user story generally follows the following format
+As a (type of user/admin) I want (goal) so that (reason)
+
+ex: As a (digest recipient), I want (to receive an email every morning) so that (I know whats going on in the world and learn something new each day)
+As a digest recipient, I want to read an inspirational quote, so that I have something to ponder throughout my day 
+As a digest recipient I want to know the weather so that I know how to dress or what to carry with me 
+As a digest recipient, I want to know current twitter trends so that I can stay hip and relevant
+As a digest recipient I want to learn random facts, so that I get smarter everyday
+
+## Stories for Admin user 
+As an Admin I want to curate the content to include so that I can create the best experience for my digest recipients
+As an Admin I want to control the time when the email digest is sent so that it has relevant information for the recipients 
+As an Admin I want to add/remove the recipients so that I control who recieves the email 
+
+What a User Story isn't 
+-> It does not address how tasks are accomplished, just focus on what and why the user wants to do something 
+
+Step 2 - Use Case 
+-> Another tool for planning a project is a use case
+-> It generally consists of 
+1. Title : What is the goal?
+2. Actor : Who desires it ? - An entity external to the application 
+3. Scenario: How is it accomplished ?
+
+Ex: 
+Title : Read tweets about twitter trends 
+Actor : Digest Recipient 
+Scenario : 
+1. The recipient opens the email digest
+2. The recipient views the twitter trends section
+3. The recipient finds it interesting and clicks on the link
+4. The link opens up a web browser to a page of related tweets 
+
+User Stories v/s Use Cases 
+-> User Stories and Use cases are different tools for capturing different information
+-> A user story focuses on the who , what and why whereas a use case captures the who what and how of a particular task or goal 
+-> For simpler projects User Stories are good, for complex ones Use cases capture more information on how to do 
+something step by step 
+
+
+Step 3 - Requirements
+
+Functional Requirements
+------------------------
+-> What the application must do?
+-> It begins with words like "The application must" or "shall"
+ex: 
+-> My daily digest app must generate an inspirational quote 
+-> The app must also retireve current weather forecast for specified twitter trents
+-> It must retrieve twitter trends 
+-> It must retrieve random wikipedia articles
+-> format content into an email
+-> Send email to specified recipients
+
+Also write details about what the app should enable the admin to do 
+-> It should enable the admin to configure which content sources to include in the email 
+-> Add recipients
+-> Remove recipients 
+-> Scheduling recurring daily time to send email 
+-> Configure sender credentials using a GUI
+
+Non Functional Requirements 
+----------------------------
+-> How should the application do it?
+-> It starts with the phrase - " It should be"
+-> It focuses on the ilities - Maintanability, Reliability, availability, scalability ...
+
+Ex:
+The Application should be 
+-> Usabiltiy - Configurable using admin GUI
+-> Extensibile to add more content types and features 
+-> Resilient to content errors - since it will be retrieved from various sources 
+
+
+Step 4 - Program Architecture
+-----------------------------
+How to structure code for the application 
+-> Since python is an OOP language, we will create classes and objects 
+-> To create classes see the user stories or requirements and pick the nouns
+ex: from functional req - nouns 
+quote    
+forecast
+location 
+article 
+content 
+email 
+recipients
+time 
+credentials 
+GUI 
+
+We can get two main classes form the above list 
+1. Content
+2. Email 
+3. GUI 
+
+-> For deciding which functions to use pick the verbs from the requirements 
+ex: Verb Phrases 
+Generate Quote 
+Retrieve Forecast 
+Retrieve Article 
+Format content 
+send Email 
+configure content 
+Add recipients 
+Remove recipients 
+schedule time 
+Configure credentials 
+ 
+Step 5 - Class Diagram
+The class diagrams are in the app_class_diagrams folder 
